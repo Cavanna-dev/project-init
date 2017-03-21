@@ -32,6 +32,8 @@ services:
         volumes:
             - ./elk/logstash:/etc/logstash
             - ./elk/logstash/patterns:/opt/logstash/patterns
+            - ./logs/symfony:/home/elk/symfony
+            - ./logs/nginx:/home/elk/nginx
         volumes_from:
             - php
             - nginx
